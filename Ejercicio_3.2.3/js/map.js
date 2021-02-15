@@ -51,13 +51,15 @@ require([
             */
 
             arcgisUtils.createMap(webmapId,"cpCenter").then(function(response){
+                
                 mapMain = response.map;
+
                 var basemapGallery = new BasemapGallery({
                     showArcGISBasemaps: true,
                     map: mapMain
                 }, "basemapGallery");
                 basemapGallery.startup();
-            });
+            
 				/*
 				 * Step: Get the map from the response
 				*/
@@ -73,7 +75,7 @@ require([
                     layerInfos: legendLayers
                 },"divLegend");
                 dijitLegend.startup();
-              
+            });
 
             /*
             //create a map
